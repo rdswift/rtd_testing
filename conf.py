@@ -19,7 +19,48 @@ import sys
 from multiproject.utils import get_project
 
 
-sys.path.append(os.path.abspath("_ext"))
+# -- Year setup --------------------------------------------------------------
+
+original_year = 2025
+this_year = datetime.datetime.now().year
+copyright_year = str(this_year) if this_year == original_year else f'{original_year}-{this_year}'
+
+
+# -- Path setup --------------------------------------------------------------
+
+# If extensions (or modules to document with autodoc) are in another directory,
+# add these directories to sys.path here. If the directory is relative to the
+# documentation root, use os.path.abspath to make it absolute, like shown here.
+sys.path.insert(0, os.path.abspath('_extensions'))
+# sys.path.append(os.path.abspath("_ext"))
+
+templates_path = ["_templates"]
+
+
+# -- Project information -----------------------------------------------------
+
+multiproject_projects = {
+    "user": {
+        "use_config_file": False,
+        "config": {
+            "project": "User Documentation",
+            "html_title": "MusicBrainz User Documentation",
+        },
+    },
+    "dev": {
+        "use_config_file": False,
+        "config": {
+            "project": "Developer Documentation",
+            "html_title": "MusicBrainz Developer Documentation",
+        },
+    },
+}
+
+docset = get_project(multiproject_projects)
+
+
+# -- Extensions --------------------------------------------------------------
+
 extensions = [
     "multiproject",
     "myst_parser",
@@ -39,28 +80,11 @@ extensions = [
     "sphinxext.opengraph",
 ]
 
-multiproject_projects = {
-    "user": {
-        "use_config_file": False,
-        "config": {
-            "project": "MusicBrainz user documentation",
-            "html_title": "MusicBrainz user documentation",
-        },
-    },
-    "dev": {
-        "use_config_file": False,
-        "config": {
-            "project": "MusicBrainz developer documentation",
-            "html_title": "MusicBrainz developer documentation",
-        },
-    },
-}
-
-docset = get_project(multiproject_projects)
-
 # Disable custom 404 on dev docs
 if docset == "user":
     extensions.append("notfound.extension")
+
+
 
 ogp_site_name = "MusicBrainz Documentation"
 ogp_use_first_image = True  # https://github.com/readthedocs/blog/pull/118
@@ -72,8 +96,6 @@ ogp_custom_meta_tags = [
 ]
 ogp_enable_meta_description = True
 ogp_description_length = 300
-
-templates_path = ["_templates"]
 
 # This may be elevated as a general issue for documentation and behavioral
 # change to the Sphinx build:
@@ -150,22 +172,59 @@ man_pages = [
     )
 ]
 
+
+# -- Options for Internationalization ----------------------------------------
+
 language = "en"
 
 locale_dirs = [
-    f"{docset}/locale/",
+    "_locale",
+    f"{docset}/_locale/",
 ]
 gettext_compact = False
 
-html_theme = "sphinx_rtd_theme"
-html_static_path = ["_static", f"{docset}/_static"]
-html_css_files = ["css/custom.css", "css/sphinx_prompt_css.css"]
-html_js_files = ["js/expand_tabs.js"]
 
-html_logo = "img/logo.svg"
+# -- Theme and Customization -------------------------------------------------
+
+# html_theme = "default"
+html_theme = "sphinx_rtd_theme"
 html_theme_options = {
-    "logo_only": True,
+    # 'analytics_id': 'G-XXXXXXXXXX',  #  Provided by Google in your dashboard
+    # 'analytics_anonymize_ip': False,
+    'logo_only': False,
+    'prev_next_buttons_location': 'bottom',
+    'style_external_links': False,
+    'vcs_pageview_mode': '',
+    'style_nav_header_background': 'black',
+    'flyout_display': 'hidden',
+    # 'flyout_display': 'attached',
+    'version_selector': False,
+    'language_selector': False,
+    # Toc options
+    'collapse_navigation': False,
+    'sticky_navigation': True,
+    'navigation_depth': 4,
+    'includehidden': True,
+    'titles_only': False
 }
+html_static_path = [
+    "_static",
+    f"{docset}/_static",
+]
+html_css_files = [
+    "css/custom.css",
+    "css/sphinx_prompt_css.css",
+    # "_static/css/extra.css",
+    # "_static/mb-specific.css",
+    # "css/extra.css",
+    "css/mb-specific.css",
+]
+html_js_files = ["js/expand_tabs.js"]
+html_favicon = '_static/musicbrainz-icon.png'
+html_logo = "img/logo.svg"
+# html_theme_options = {
+#     "logo_only": True,
+# }
 html_context = {
     # Fix the "edit on" links.
     # TODO: remove once we support different rtd config
@@ -177,6 +236,10 @@ html_context = {
     "github_version": "main",
     # Use to generate the Plausible "data-domain" attribute from the template
     "plausible_domain": f"{os.environ.get('READTHEDOCS_PROJECT')}.readthedocs.io",
+    # 'extra_css_files': [
+    #     '_static/css/extra.css',
+    #     '_static/css/mb-specific.css',
+    # ],
 }
 
 # See dev/style_guide.rst for documentation
