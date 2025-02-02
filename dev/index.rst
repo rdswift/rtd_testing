@@ -1,5 +1,5 @@
 ReadTheDocs Test Document 2 (Developer Guide)
-========================================
+=============================================
 
 This is the second document in the test.
 
