@@ -63,4 +63,4 @@ Auto-Editors
 Bots
 ----
 
-Bot authors should follow the :doc:`dedicated code of conduct </guidelines/code_of_conduct_bots>`.
+Bot authors should follow the :doc:`dedicated code of conduct <code_of_conduct_bots>`.

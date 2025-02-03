@@ -28,9 +28,9 @@ This documentation is licensed under CC0 1.0. To view a copy of this license, vi
    :caption: Getting Started
    :hidden:
 
-   miscellaneous/about
+   common/about
    guidelines/beginner_guide
-   guidelines/code_of_conduct
+   common/code_of_conduct
    guidelines/create_account
 
 

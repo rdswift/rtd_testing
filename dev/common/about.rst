@@ -14,22 +14,22 @@ As an encyclopedia and as a community, MusicBrainz exists only to collect as muc
 MusicBrainz Database
 --------------------
 
-The :doc:`MusicBrainz Database </musicbrainz_database/index>` stores all of the various pieces of information we collect about music, from artists and their releases to works and their composers, and much more. 
+The MusicBrainz Database stores all of the various pieces of information we collect about music, from artists and their releases to works and their composers, and much more.
 
 .. note:: We do not actually store or have access to any of the music recordings!
 
-Most of the data in the :doc:`MusicBrainz Database </musicbrainz_database/index>` is licensed under `CC0 <https://creativecommons.org/publicdomain/zero/1.0/>`_, which effectively places the data into the Public Domain. That means that anyone can :doc:`download the data </musicbrainz_database/download>` and use it in any way they want. The remaining data is released under the Creative Commons `Attribution-NonCommercial-ShareAlike 3.0 <http://creativecommons.org/licenses/by-nc-sa/3.0/>`_ license.
+Most of the data in the MusicBrainz Database is licensed under `CC0 <https://creativecommons.org/publicdomain/zero/1.0/>`_, which effectively places the data into the Public Domain. That means that anyone can download the data and use it in any way they want. The remaining data is released under the Creative Commons `Attribution-NonCommercial-ShareAlike 3.0 <http://creativecommons.org/licenses/by-nc-sa/3.0/>`_ license.
 
-All our data is available for commercial licensing. If you are interested in licensing this data for commercial use, please :doc:`contact us </miscellaneous/contact>`.
+All our data is available for commercial licensing. If you are interested in licensing this data for commercial use, please :doc:`contact us <contact>`.
 
 What can I do with MusicBrainz?
 -------------------------------
 
-If you have a digital music collection, :doc:`MusicBrainz Picard </products/picard>` will help you tag your files.
+If you have a digital music collection, `MusicBrainz Picard <https://picard.musicbrainz.org>`_ will help you tag your files.
 
-If you are a developer, our :doc:`developer resources </development/index>` will help you in making use of our data.
+If you are a developer, our developer resources will help you in making use of our data.
 
-If you are a commercial user, our :doc:`live data feed </products/live_data_feed>` will provide your local database with replication packets to keep it in sync.
+If you are a commercial user, our live data feed will provide your local database with replication packets to keep it in sync.
 
 MetaBrainz Foundation
 ---------------------

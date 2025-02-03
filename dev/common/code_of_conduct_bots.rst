@@ -18,7 +18,7 @@ Edit limits
    Bots shouldn't make more than 1,000 edits (be it normal edits or autoedits) per day - that allows users that want to check them all to do so.
 
 **Exceptions**
-   Exceptions to the above limits can be granted in the :doc:`Development Chat </miscellaneous/metabrainz_meeting>`.
+   Exceptions to the above limits can be granted in the Development Chat.
 
 Voting
 ------

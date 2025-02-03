@@ -28,8 +28,8 @@ This documentation is licensed under CC0 1.0. To view a copy of this license, vi
    :caption: Getting Started
    :hidden:
 
-   ../common/about
-   ../common/code_of_conduct
+   common/about
+   common/code_of_conduct
 
 
 .. .. toctree::
