@@ -1,0 +1,40 @@
+# Language Specific Guidelines
+
+There are language-specific guidelines available for the following languages:
+
+- [English](english.md)
+- [English (Classical)](../classical/language_english.md)
+- [Catalan](catalan.md)
+- [Chinese](chinese.md)
+- [Czech](czech.md)
+- [Danish](danish.md)
+- [Dutch](dutch.md)
+- [Estonian](estonian.md)
+- [Estonian (Classical)](../classical/language_estonian.md)
+- [Finnish](finnish.md)
+- [French](french.md)
+- [German](german.md)
+- [Greek](greek.md)
+- [Hebrew](hebrew.md)
+- [Hungarian](hungarian.md)
+- [Italian](italian.md)
+- [Japanese](japanese.md)
+- [Latin](latin.md)
+- [Latvian](latvian.md)
+- [Lithuanian](lithuanian.md)
+- [Norwegian](norwegian.md)
+- [Polish](polish.md)
+- [Portuguese](portuguese.md)
+- [Romanian](romanian.md)
+- [Russian](russian.md)
+- [Slovak](slovak.md)
+- [Spanish](spanish.md)
+- [Spanish (Classical)](../classical/language_spanish.md)
+- [Swedish](swedish.md)
+- [Turkish](turkish)
+- [Vietnamese](vietnamese)
+- [Yiddish](yiddish.md)
+
+Converting from one script to another:
+
+- [Transliterations](_transliterations.md)
